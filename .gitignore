@@ -172,3 +172,17 @@ gradle-app.setting
 *.hprof
 
 # End of https://www.toptal.com/developers/gitignore/api/intellij+all,webstorm+all,gradle
+
+# --- ZASVET monorepo patch: append to the END, later rules win ---
+
+# Nested IDE folders: toptal's .idea/* is anchored to repo root,
+# our .idea lives in backend/ and frontend/ — need depth-free pattern
+.idea/
+*.iml
+
+# Secrets & runtime data (never in git)
+.env
+uploads/
+
+# Logs
+*.log
